@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panic Function</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text">
+    <p></p>
+    <button type="submit">submit</button>
+  </div>
+
+  <script>
+    /* Panic function
+Write a PANIC! function. The function should take in a sentence and return the same
+sentence in all caps with an exclamation point (!) at the end. Use JavaScript's
+built in string methods. 
+
+If the string is a phrase or sentence, add a 😱 emoji in between each word. 
+
+Example input: "Hello"
+Example output: "HELLO!"
+
+Example input: "I'm almost out of coffee"
+Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
+
+WINTER 😱 IS 😱 COMING!
+*/
+
+
+// console.log(panic("Hello")); //HELLO!
+// console.log(panic("I'm almost out of coffee")); //I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!
+// console.log(panic("winter is coming")) 
+
+    let inp = document.querySelector("input")
+    let button = document.querySelector("button")
+    let para=document.querySelector("p")
+
+
+    function panic(input){
+      let upperCase=inp.value.toUpperCase() + "" +"!";
+
+      para.innerHTML=upperCase.replace(/\s/g,"😂");
+    }
+
+    button.onclick=function(){
+      panic();
+    }
+    
+
+</script>
+</body>
+
+</html>
